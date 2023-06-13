@@ -2,6 +2,8 @@ FROM debian:11
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get -y install python3-pip
 RUN apt-get -y install default-libmysqlclient-dev
+RUN pip install flask
 RUN pip install flask-mysqldb
-CMD cp app1.py
-CMD flask --app app1 run
+COPY app1.py app1.py
+COPY templates/* templates/forms.html
+CMD /usr/local/bin/flask --app app1.py run

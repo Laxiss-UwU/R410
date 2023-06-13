@@ -1,1 +1,1 @@
-docker build -t app1 -f dockerfile2 .
+docker build -t application -f dockerfile2 .
