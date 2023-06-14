@@ -1,1 +1,1 @@
-docker run -d -p 8000:8000 --name test monapplication1
+docker run -d -p 8000:8000 --name app1 monapplication1
