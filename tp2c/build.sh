@@ -1,0 +1,1 @@
+docker build -t tp2c -f dockerfile4 .

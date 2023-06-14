@@ -1,0 +1,9 @@
+FROM debian:11
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get -y install python3-pip
+RUN apt-get -y install default-libmysqlclient-dev
+RUN pip install fastapi uvicorn mysql-connector-python
+WORKDIR /srv
+COPY app1.py app1.py
+CMD uvicorn app1:app --reload --host 0.0.0.0
+CMD bash
